@@ -19,7 +19,7 @@ async def rename_start(client, message):
     file = getattr(message, message.media.value)
     filename = file.file_name  
     if file.file_size > 2000 * 1024 * 1024:
-         return await message.reply_text("Sᴏʀʀy Bʀᴏ Tʜɪꜱ Bᴏᴛ Iꜱ Dᴏᴇꜱɴ'ᴛ Sᴜᴩᴩᴏʀᴛ Uᴩʟᴏᴀᴅɪɴɢ Fɪʟᴇꜱ Bɪɢɢᴇʀ Tʜᴀɴ 2Gʙ. ᴄᴏɴᴛᴀᴄᴛ ʙᴏᴛ <a href='https://t.me/Illegal_Developer/10'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>")
+         return await message.reply_text("Sᴏʀʀy Bʀᴏ Tʜɪꜱ Bᴏᴛ Iꜱ Dᴏᴇꜱɴ'ᴛ Sᴜᴩᴩᴏʀᴛ Uᴩʟᴏᴀᴅɪɴɢ Fɪʟᴇꜱ Bɪɢɢᴇʀ Tʜᴀɴ 2Gʙ. ᴄᴏɴᴛᴀᴄᴛ ʙᴏᴛ <a href='https://t.me/PandaWepChat'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>")
 
     try:
         await message.reply_text(
@@ -79,7 +79,7 @@ async def doc(bot, update):
 
     ms = await update.message.edit("ɪʟʟᴇɢᴀʟ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....")    
     try:
-     	path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram,progress_args=("ɪʟʟᴇɢᴀʟ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....", ms, time.time()))                    
+     	path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram,progress_args=("File Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....", ms, time.time()))                    
     except Exception as e:
      	return await ms.edit(e)
      	     
@@ -114,7 +114,7 @@ async def doc(bot, update):
          img.resize((320, 320))
          img.save(ph_path, "JPEG")
 
-    await ms.edit("ɪʟʟᴇɢᴀʟ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....")
+    await ms.edit("File Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....")
     type = update.data.split("_")[1]
     try:
         if type == "document":
