@@ -129,6 +129,7 @@ async def doc(bot, update):
             await bot.send_video(
 		update.message.chat.id,
 	        video=file_path,
+		supports_streaming=True,
 	        caption=caption,
 		thumb=ph_path,
 		duration=duration,
