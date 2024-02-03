@@ -51,10 +51,10 @@ async def refunc(client, message):
         media = getattr(file, file.media.value)
         if not "." in new_name:
             if "." in media.file_name:
-                extn = media.file_name.rsplit("." + "mkv", 1)[-1]
+                extn = media.file_name.rsplit('.', 1)[-1]
             else:
                 extn = "mkv"
-            new_name = new_name + "." + "mkv"
+            new_name = new_name + "." + "mkv" + extn
         await reply_message.delete()
 
         button = [[InlineKeyboardButton("📁 Dᴏᴄᴜᴍᴇɴᴛ",callback_data = "upload_document")]]
