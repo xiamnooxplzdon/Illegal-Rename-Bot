@@ -125,20 +125,16 @@ async def doc(bot, update):
                 caption=caption, 
                 progress=progress_for_pyrogram,
                 progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", ms, time.time()))
-  elif tg_send_type == "video": 
-        width, height, duration = await bot.send_video(
-        update.message.chat.id,
-        video=file_path,
-        duration=duration,
-        width=width,
-        height=height,
-        supports_streaming=True,
-        caption=caption,
-        thumb=ph_path,
-        duration=duration,
-        progress=progress_for_pyrogram,
-        progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", ms, time.time())
-    )
+ 	  elif type == "video": 
+            await bot.send_video(
+		update.message.chat.id,
+	        video=file_path,
+	        caption=caption,
+		thumb=ph_path,
+		duration=duration,
+		supports_streaming=True,
+	        progress=progress_for_pyrogram,
+		progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", ms, time.time()))
         elif type == "audio": 
             await bot.send_audio(
 		update.message.chat.id,
